@@ -16,5 +16,10 @@
         /// mood frequency
         /// </summary>
         public int Mood {  get; set; }
+
+        /// <summary>
+        /// image location in file system
+        /// </summary>
+        public string Image { get; set; }
     }
 }

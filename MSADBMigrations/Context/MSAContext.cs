@@ -8,6 +8,11 @@ namespace MSADBMigrations.Context
     {
         private IConfiguration configuration;
 
+        public MSAContext()
+        {
+            configuration = Program.BuilderConfiguration();
+        }
+
         public MSAContext(DbContextOptions<MSAContext> options): base(options)
         {
             configuration = Program.BuilderConfiguration();
