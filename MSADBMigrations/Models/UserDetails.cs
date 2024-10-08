@@ -17,7 +17,7 @@ namespace MSADBMigrations.Models
         /// location details
         /// </summary>
         [Required]
-        public virtual LocationDetails? Location { get; set; }
+        public virtual ICollection<LocationDetails>? Location { get; set; }
 
         /// <summary>
         /// mood frequency

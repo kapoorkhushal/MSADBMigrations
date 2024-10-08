@@ -7,6 +7,13 @@ namespace MSADBMigrations.Models
     public class LocationDetails: BaseEntity
     {
         /// <summary>
+        /// location id
+        /// </summary>
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid LocationId { get; set; }
+
+        /// <summary>
         /// latitude
         /// </summary>
         [Required]
