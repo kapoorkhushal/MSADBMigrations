@@ -4,6 +4,7 @@ using MSADBMigrations.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MSADBMigrations.Migrations
 {
     [DbContext(typeof(MSAContext))]
-    partial class MSAContextModelSnapshot : ModelSnapshot
+    [Migration("20241008193922_User-Location_Relation-Update-3")]
+    partial class UserLocation_RelationUpdate3
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

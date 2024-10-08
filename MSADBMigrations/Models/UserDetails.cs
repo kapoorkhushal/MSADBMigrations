@@ -7,6 +7,15 @@ namespace MSADBMigrations.Models
     [Table("User")]
     public class UserDetails: BaseEntity
     {
+
+        /// <summary>
+        /// user id
+        /// </summary>
+        [Required]
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public Guid Id { get; set; }
+
         /// <summary>
         /// user id
         /// </summary>
@@ -17,7 +26,7 @@ namespace MSADBMigrations.Models
         /// location details
         /// </summary>
         [Required]
-        public virtual ICollection<LocationDetails>? Location { get; set; }
+        public virtual LocationDetails? Location { get; set; }
 
         /// <summary>
         /// mood frequency
