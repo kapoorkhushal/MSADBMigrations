@@ -24,15 +24,12 @@ namespace MSADBMigrations.Migrations
 
             modelBuilder.Entity("MSADBMigrations.Models.LocationDetails", b =>
                 {
-                    b.Property<Guid>("LocationId")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreationDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<Guid>("Id")
-                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Latitude")
                         .IsRequired()
@@ -45,7 +42,7 @@ namespace MSADBMigrations.Migrations
                     b.Property<DateTime>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("LocationId");
+                    b.HasKey("Id");
 
                     b.ToTable("Location");
                 });

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MSADBMigrations.Migrations
 {
     [DbContext(typeof(MSAContext))]
-    [Migration("20241007162048_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20241008190056_InitialCommit")]
+    partial class InitialCommit
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -38,9 +38,6 @@ namespace MSADBMigrations.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("LocationId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Longitude")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -50,7 +47,7 @@ namespace MSADBMigrations.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Locations");
+                    b.ToTable("Location");
                 });
 
             modelBuilder.Entity("MSADBMigrations.Models.UserDetails", b =>
@@ -82,7 +79,7 @@ namespace MSADBMigrations.Migrations
 
                     b.HasIndex("LocationId");
 
-                    b.ToTable("Users");
+                    b.ToTable("User");
                 });
 
             modelBuilder.Entity("MSADBMigrations.Models.UserDetails", b =>
