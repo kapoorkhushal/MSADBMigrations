@@ -10,7 +10,6 @@ namespace MSADBMigrations.Models
         /// location id
         /// </summary>
         [Key]
-        [Required]
         public Guid LocationId { get; set; }
 
         /// <summary>

@@ -10,7 +10,6 @@ namespace MSADBMigrations.Models
         /// <summary>
         /// user id
         /// </summary>
-        [Key]
         [Required]
         public Guid UserId { get; set; }
 
